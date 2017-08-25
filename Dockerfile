@@ -37,9 +37,9 @@ RUN git clone \
 
 # Install Google Cloud SDK
 RUN apk --update --no-cache add python2 \
+  && mkdir /opt \
   && curl -o /opt/google-cloud-sdk.tar.gz \
     https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-158.0.0-linux-x86_64.tar.gz \
-  && mkdir /opt \
   && cd /opt \
   && tar zxf google-cloud-sdk.tar.gz \
   && rm google-cloud-sdk.tar.gz \
