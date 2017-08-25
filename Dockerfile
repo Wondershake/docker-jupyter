@@ -1,8 +1,5 @@
 FROM python:3.6.2-alpine3.6
 
-# Make Directories
-RUN mkdir /notebook /opt
-
 # Install apk Packages
 RUN apk update \
   # Install Dependencies
@@ -42,6 +39,7 @@ RUN git clone \
 RUN apk --update --no-cache add python2 \
   && curl -o /opt/google-cloud-sdk.tar.gz \
     https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-158.0.0-linux-x86_64.tar.gz \
+  && mkdir /opt \
   && cd /opt \
   && tar zxf google-cloud-sdk.tar.gz \
   && rm google-cloud-sdk.tar.gz \
@@ -60,6 +58,9 @@ RUN pip --no-cache-dir install pandas
 RUN pip --no-cache-dir install scipy
 RUN pip --no-cache-dir install scikit-learn
 RUN pip --no-cache-dir install jupyter
+
+# Make Directories
+RUN mkdir /notebook
 
 # Configure Jupyter Notebook
 ADD jupyter_notebook_config.py /root/.jupyter/
