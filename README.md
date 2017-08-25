@@ -3,6 +3,8 @@ Docker Image: Wondershake Jupyter
 
 This docker image is an all-in-one Jupyter Notebook on Alpine Linux 3.6.
 
+[wondershake/jupyter - Docker Hub](https://hub.docker.com/r/wondershake/jupyter/)
+
 # Usage
 ## Jupyter Notebook
 
