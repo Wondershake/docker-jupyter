@@ -1,7 +1,7 @@
 FROM python:3.6.2-alpine3.6
 
 # Make Directories
-RUN mkdir /notebook
+RUN mkdir /notebook /opt
 
 # Install apk Packages
 RUN apk update \
