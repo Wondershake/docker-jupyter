@@ -11,15 +11,26 @@ This docker image is an all-in-one Jupyter Notebook on Alpine Linux 3.6.
 Execute following command:
 
 ```bash
-docker run -p 8888:8888 wondershake/jupyter
+docker run --name jupyter -p 8888:8888 wondershake/jupyter
 ```
 
 and you can access Jupyter Notebook as http://localhost:8888/
 
-## Bash
+## Console
+
+You can enter console with bash.
+
+```bash
+docker exec -ti jupyter bash -l
+```
 
 ## Google Cloud SDK
 
+To initialize `gcloud`:
+
+```bash
+docker exec -ti jupyter bash -lc "gcloud init"
+```
 
 # Components
 
