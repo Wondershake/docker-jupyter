@@ -58,6 +58,7 @@ RUN pip --no-cache-dir install pandas
 RUN pip --no-cache-dir install scipy
 RUN pip --no-cache-dir install scikit-learn
 RUN pip --no-cache-dir install jupyter
+RUN pip --no-cache-dir install inflection
 
 # Make Directories
 RUN mkdir /notebook
