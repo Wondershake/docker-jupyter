@@ -59,6 +59,8 @@ RUN pip --no-cache-dir install scipy
 RUN pip --no-cache-dir install scikit-learn
 RUN pip --no-cache-dir install jupyter
 RUN pip --no-cache-dir install inflection
+RUN pip --no-cache-dir install gensim
+RUN pip --no-cache-dir install pandas_gbq
 
 # Make Directories
 RUN mkdir /notebook
