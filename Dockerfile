@@ -18,6 +18,8 @@ RUN apk update \
     gfortran \
     git \
     lapack-dev \
+    libxml2-dev \
+    libxslt-dev \
     make \
     openssl \
     perl \
@@ -67,6 +69,14 @@ RUN mkdir /notebook
 
 # Configure Jupyter Notebook
 ADD jupyter_notebook_config.py /root/.jupyter/
+
+# Enable jupyter_contrib_nbextensions
+# https://github.com/ipython-contrib/jupyter_contrib_nbextensions
+# https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator
+RUN pip --no-cache-dir install jupyter_contrib_nbextensions \
+  && jupyter contrib nbextension install --user \
+  && pip --no-cache-dir install jupyter_nbextensions_configurator \
+  && jupyter nbextensions_configurator enable --user
 
 # Ports
 EXPOSE 8888
