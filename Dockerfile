@@ -53,16 +53,16 @@ RUN apk --update --no-cache add python2 \
 
 # Install Python Packages
 RUN pip --no-cache-dir install PyYAML
+RUN pip --no-cache-dir install gensim
+RUN pip --no-cache-dir install inflection
+RUN pip --no-cache-dir install jupyter
+RUN pip --no-cache-dir install matplotlib
 RUN pip --no-cache-dir install neologdn
 RUN pip --no-cache-dir install numpy
-RUN pip --no-cache-dir install matplotlib
 RUN pip --no-cache-dir install pandas
-RUN pip --no-cache-dir install scipy
-RUN pip --no-cache-dir install scikit-learn
-RUN pip --no-cache-dir install jupyter
-RUN pip --no-cache-dir install inflection
-RUN pip --no-cache-dir install gensim
 RUN pip --no-cache-dir install pandas_gbq
+RUN pip --no-cache-dir install scikit-learn
+RUN pip --no-cache-dir install scipy
 
 # Make Directories
 RUN mkdir /notebook
