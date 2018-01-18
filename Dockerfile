@@ -63,6 +63,7 @@ RUN pip --no-cache-dir install pandas
 RUN pip --no-cache-dir install pandas_gbq
 RUN pip --no-cache-dir install scikit-learn
 RUN pip --no-cache-dir install scipy
+RUN pip --no-cache-dir install tqdm
 
 # Make Directories
 RUN mkdir /notebook
