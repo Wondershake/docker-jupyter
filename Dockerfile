@@ -79,6 +79,11 @@ RUN pip --no-cache-dir install jupyter_contrib_nbextensions \
   && pip --no-cache-dir install jupyter_nbextensions_configurator \
   && jupyter nbextensions_configurator enable --user
 
+# Install font for Japanese (using matplotlib)
+RUN mkdir -p /usr/share/fonts
+COPY IPAGothic /usr/share/fonts/IPAGothic
+RUN fc-cache -fv
+
 # Ports
 EXPOSE 8888
 
