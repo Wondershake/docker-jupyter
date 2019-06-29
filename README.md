@@ -64,8 +64,6 @@ Natural Language Processing:
 * [KyTea](http://www.phontron.com/kytea/)
 * [NEologd](https://github.com/neologd/mecab-ipadic-neologd)
 * [neologdn](https://github.com/ikegami-yukino/neologdn) ([normalization document](https://github.com/neologd/mecab-ipadic-neologd/wiki/Regexp.ja#python-written-by-hideaki-t--overlast))
-* [Cabocha](http://taku910.github.io/cabocha/)
-* [cabocha(wrapper)](https://github.com/kenkov/cabocha)
 
 Jupyter Notebook:
 
