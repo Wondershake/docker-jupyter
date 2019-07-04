@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pyyaml = "*"
+gensim = "*"
+inflection = "*"
+matplotlib = "*"
+neologdn = "*"
+numpy = "*"
+pandas = "*"
+pandas-gbq = "*"
+scipy = "*"
+tqdm = "*"
+cython = "*"
+scikit-learn = "*"
+imbalanced-learn = "*"
+jupyter = "*"
+jupyter-contrib-nbextensions = "*"
+jupyter-nbextensions-configurator = "*"
+
+[requires]
+python_version = "3.7"
