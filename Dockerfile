@@ -69,14 +69,14 @@ WORKDIR /app
 # Install Python packages
 RUN pip3 --no-cache-dir install pipenv
 COPY Pipfile Pipfile.lock ./
-RUN pipenv sync
+RUN pipenv install --system --ignore-pipfile --deploy
 
 # Enable jupyter_contrib_nbextensions
 # https://github.com/ipython-contrib/jupyter_contrib_nbextensions
 # https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator
 RUN set -ex \
-  && pipenv run jupyter contrib nbextension install --user \
-  && pipenv run jupyter nbextensions_configurator enable --user
+  && jupyter contrib nbextension install --user \
+  && jupyter nbextensions_configurator enable --user
 
 # Make Directories
 RUN mkdir /notebook
@@ -91,4 +91,4 @@ EXPOSE 8888
 VOLUME /notebook
 VOLUME /root/.config/gcloud
 
-CMD pipenv run jupyter notebook
+CMD jupyter notebook
